@@ -2,6 +2,8 @@ Contents
 
 1. bin_delete.py -- Contains code for identifying binaries in rebound simulation (bin_find_sim) and deleting binaries (delete_bins). The latter routine deletes one binary from every pair (it leaves the other star alone!). 
 
-2. test_planet_moon.py -- Test if we recover binaries injected into rebound simulations. 
+2. test_planet_moon.py -- Test if we recover binaries injected into rebound simulations. Also illustrates how to use the binary deletion routine!
 
-3. With binary deletion the number of stars you end up with in a simulation will vary somewhat from simulation-to-simulation in a typical setup. To avoid this issue I suggest adding some extra particles at the beginning (comfortably more than would be deleted in delete_bins). Then after binary deletion, delete the excess particles, so we have exactly the number we want.
+3. With binary deletion the number of stars you end up with in a simulation will vary somewhat from simulation-to-simulation in a typical setup. To avoid this issue I suggest adding some extra particles at the beginning (comfortably more than would be deleted in delete_bins). Then after binary deletion, delete the excess particles, so we have exactly the number we want. 
+
+sketch.py has some pseudocode illustrating how you might do this.
