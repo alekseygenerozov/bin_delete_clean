@@ -1,6 +1,6 @@
 Contents
 
-1. bin_delete.py -- Contains code for identifying binaries in rebound simulation (bin_find_sim) and deleting binaries (delete_bins). The latter routine deletes one binary from every pair (it leaves the other star alone!). 
+1. bin_delete.py -- Contains code for identifying binaries in rebound simulation (bin_find_sim) and deleting binaries (delete_bins). The latter routine deletes one star from every binary pair (it leaves the other star alone!). 
 
 2. test_planet_moon.py -- Test if we recover binaries injected into rebound simulations. Also illustrates how to use the binary deletion routine!
 
