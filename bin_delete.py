@@ -23,9 +23,6 @@ def bin_props(p1, p2):
 	p2_com = p2 - com
 	v12 = (p1_com.vx**2.+p1_com.vy**2.+p1_com.vz**2.)
 	v22 = (p2_com.vx**2.+p2_com.vy**2.+p2_com.vz**2.)
-
-	d12 = (p1_com.x**2.+p1_com.y**2.+p1_com.z**2.)
-	d22 = (p2_com.vx**2.+p2_com.y**2.+p2_com.z**2.)	
 	##Difference in the forces acting on the two particles;
 	ft = np.array([m2*(p2.ax)-m2*(com.ax), m2*(p2.ay)-m2*(com.ay), m2*(p2.az)-m2*com.az])
 	##Unit vector pointing from particle 2 to particle 1
