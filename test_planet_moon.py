@@ -27,16 +27,12 @@ for i in range(1, 4):
 sim3.add(m=3e-10, a=a_bin, e=e_bin, inc=inc_bin, primary=sim3.particles[3])
 
 def test_bin_props():
-	x=bin_delete.bin_props(sim2.particles[1], sim2.particles[2])
-	assert abs(x[1]-a_bin)/a_bin<tol
-	assert abs(x[2]**0.5-e_bin)/e_bin<tol
-	print(x[-2]*np.pi/180.)
-	assert abs(x[-2]*np.pi/180.-inc_bin)/inc_bin<tol
-
+	x=bin_delete.bin_find_sim(sim2)
+	assert abs(x[0][4]-a_bin)/a_bin<tol
+	assert abs(x[0][6]-e_bin)/e_bin<tol
+	
 def test_bin_find3():
 	bins=bin_delete.bin_find_sim(sim3)
-	x=bin_delete.bin_props(sim3.particles[3], sim3.particles[4])
-	assert abs(x[1]-a_bin)/a_bin<tol
 	assert (len(bins)==1)
 	assert set(bins[0,[1,2]])=={3,4}
 
